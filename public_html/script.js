@@ -21,6 +21,8 @@ $("document").ready(function(){
      
      $('h1').bind('click', mouseClick);
      
+     $('h1').bind('click', mouseClick);
+     
      
 });
 
