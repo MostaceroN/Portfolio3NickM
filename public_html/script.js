@@ -21,7 +21,11 @@ $("document").ready(function(){
      
      $('h1').bind('click', mouseClick);
      
-     $('h1').bind('click', mouseClick);
+     $('#replaceWText').bind('click', replaceWText);
+     
+     $('#randPara').bind('click', addAPara);
+     
+     $('removePara').bind('click', removeAPara);
      
      
 });
@@ -35,3 +39,14 @@ function mouseOutMe(){
     $('h1').html('Nick is pretty cool');
 }
 
+function removeAPara(){
+    $('#randPara p:last').remove();
+}
+
+function addAPara(){
+    $('#randPara').append('<p>ADDED</p>');
+}
+
+function replaceWText(){
+    $('#replaceWText').text('Replaced!');
+}
