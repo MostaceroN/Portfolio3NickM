@@ -50,3 +50,22 @@ function addAPara(){
 function replaceWText(){
     $('#replaceWText').text('Replaced!');
 }
+
+function hideThePage(){
+    $('#show').css('visibility', 'visible');
+    $('div').hide('slide', {}, 2500);
+    $('#show').show('fold', {}, 2500);
+    }
+    
+function showThePage(){
+    $('div').show('fold', {}, 2500);
+    $('#show').hide('puff', {}, 2500);
+}
+
+function removeAPara(){
+    $('#randPara p:last').remove();
+}
+
+function addAPara(){
+    $('#randPara').append('<p>ADDED</p>');
+}
