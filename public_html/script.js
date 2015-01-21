@@ -31,41 +31,67 @@ $("document").ready(function(){
 });
 
 
-function mouseOverMe(){
-    $("h1").html("Nick is really cool");
+$("#replaceWText").bind("click", replaceWText);
+    
+    $("#randPara").bind("click", addAPara);
+
+    $("#removePara").bind("click", removeAPara);
+    
+    
+    $("#show").css("visibility", "hidden");
+    
+    $("#hide").bind("click", hideThePage);
+    
+    $("#show").bind("click", showThePage);
+
+
+    
+    $("#superHumans").accordion({header: "h2"});
+    $("#superHumans").css("width", "400px");
+    
+    $("h2").css("background", "cyan");
+    
+});
+
+//////changes the ttext when mouse hovers over it////
+function mouseOverMe() {
+    $("h1").html("GREATEST OF ALL TIME");
 }
 
-function mouseOutMe(){
-    $('h1').html('Nick is pretty cool');
+function mouseOutMe() {
+    $("h1").html("LEBRON JAMES");
 }
+
+function mouseClick() {
+    $("h1").html("CLUTCH");
+}
+
+
+////1) Add, 2) Remove, and 3) Change HTML Elements using JQuery////
 
 function removeAPara(){
-    $('#randPara p:last').remove();
+    $("#randPara p:last").remove();
 }
 
 function addAPara(){
-    $('#randPara').append('<p>ADDED</p>');
+    $("#randPara").append("<p>ADDED</p>");
 }
 
 function replaceWText(){
-    $('#replaceWText').text('Replaced!');
+    $("#replaceWText").text("Never Replaced!");
 }
+
+
+
+////hiding and showing my page////
 
 function hideThePage(){
-    $('#show').css('visibility', 'visible');
-    $('div').hide('slide', {}, 2500);
-    $('#show').show('fold', {}, 2500);
-    }
-    
+    $("#show").css("visibility", "visible");
+    $("div").hide("slide", {}, 2500);
+    $("#show").show("fold", {}, 2500);
+}
+   
 function showThePage(){
-    $('div').show('fold', {}, 2500);
-    $('#show').hide('puff', {}, 2500);
-}
-
-function removeAPara(){
-    $('#randPara p:last').remove();
-}
-
-function addAPara(){
-    $('#randPara').append('<p>ADDED</p>');
+    $("div").show("fold", {}, 2500);
+    $("#show").hide("puff", {}, 2500);
 }
